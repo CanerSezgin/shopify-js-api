@@ -6,7 +6,7 @@ class ShopifyAPI {
   constructor(shop, accessToken) {
 
       // Validations
-      if (!shop && !accessToken) {
+      if (!shop || !accessToken) {
         throw Error(
           "ShopifyInstance: ShopName & AccessToken have to be provided."
         );

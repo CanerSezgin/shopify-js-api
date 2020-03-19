@@ -1,4 +1,4 @@
-const shopify = require('./utils/shopify');
+const { shopify } = require('./utils/shopify');
 
 describe('Product API', () => {
     /* let http;
@@ -6,13 +6,14 @@ describe('Product API', () => {
       http = (await withHandshake()).url('api/V1/customer/appleid-login');
     }); */
   
-    it('product.list - Retrieve All Products', async () => {
-      try {
-        const productList = await shopify.product.list()
-        console.log(productList)
-      } catch ({ response }) {
-        console.log(response)
-      }
-    });
+    /* it('product.list - Retrieve All Products', async () => {
+      const data = await shopify.product.list()
+      expect(data.products.length).not.toBe(0);
+    }); */
+
+    /* it('product.count - Retrieves a count of products', async () => {
+      const data = await shopify.product.count()
+      expect(data).toHaveProperty('count')
+    }); */
   
   });
