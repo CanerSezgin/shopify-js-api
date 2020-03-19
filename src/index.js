@@ -1,6 +1,7 @@
 const axios = require("axios");
 const Product = require("./lib/Product");
 const Access = require("./lib/Access");
+const ScriptTag = require("./lib/ScriptTag");
 
 class ShopifyAPI {
   constructor(shop, accessToken) {
@@ -22,6 +23,7 @@ class ShopifyAPI {
 
       this.access = new Access(client);
       this.product = new Product(client);
+      this.scriptTag = new ScriptTag(client);
      
   }
 }

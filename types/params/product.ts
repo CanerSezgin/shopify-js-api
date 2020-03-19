@@ -19,5 +19,23 @@ type ProductListParams = ProductCountParams & {
     title: string,
     since_id: number,
     limit: number
+}
 
+type ScriptTagListParams = {
+    since_id: number,
+    limit: number,
+    created_at_min: string;
+    created_at_max: string;
+    updated_at_min: string;
+    updated_at_max: string;
+    fields: string[],
+    src: string
+}
+
+type ScriptTagListCountParams = {
+    src: string
+}
+
+type ScriptTagListSingleParams = {
+    fields: string[],
 }

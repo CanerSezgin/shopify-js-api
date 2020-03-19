@@ -1,3 +1,5 @@
+const paramProcessor = require('../utils/paramProcessor');
+
 class Product {
   constructor(client) {
     /**
@@ -37,21 +39,6 @@ class Product {
       }
     };
   }
-}
-
-const paramProcessor = params => {
-  const keys = Object.keys(params)
-  const obj = {}
-  keys.forEach(key => {
-    let processed;
-    const value = params[key]
-    processed = value
-    if(Array.isArray(value)){
-      processed = value.join(',')
-    }
-    obj[key] = processed
-  });
-  return obj
 }
 
 module.exports = Product;
